@@ -9,4 +9,8 @@ export class UsersService {
   async findOne(username: string): Promise<User | undefined> {
     return this.users.find((u) => u.username === username);
   }
+
+  async findAll(): Promise<User[]> {
+    return [...this.users];
+  }
 }
